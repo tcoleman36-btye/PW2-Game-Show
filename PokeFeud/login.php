@@ -38,10 +38,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<htm lang="en">
 <head>
-    <title>Pokefeud - Login</title>
-    <link rel="stylesheet" href="style.css">
+     <meta charset="UTF-8">
+     <meta name="description" content="Log in screen for gameshow">
+     <title>Pokefeud - Login</title>
+     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="login-container">
