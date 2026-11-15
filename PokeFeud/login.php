@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <!DOCTYPE html>
-<htm lang="en">
+<html lang="en">
 <head>
      <meta charset="UTF-8">
      <meta name="description" content="Log in screen for gameshow">
