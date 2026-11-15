@@ -11,9 +11,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $feedback = "Both fields are required.";
             break;
         }
+
+        if (strpos($inputUser, '|') !== false) {
+            $feedback = "Username can not have the | character";
+            break;
+        }
+
+        $userFile = __DIR__ . '/users.txt';
         
-        if (file_exists('users.txt')) {
-            $lines = file('users.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        if (file_exists($userFile)) {
+            $lines = file($userFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
             foreach ($lines as $line) {
                 [$existingUser] = explode('|', $line);
                 if ($existingUser === $inputUser) {
@@ -22,14 +29,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             }
         }
+
+        if (!file_exists($userFile)) {
+           $feedback = "users.txt does not exist at: " . $userFile;
+           break;
+        }
+
+        if (!is_writable($userFile)) {
+           $feedback = "PHP does not have permission to write to users.txt.";
+           break;
+        }
         
         $hashedPass = password_hash($inputPass, PASSWORD_DEFAULT);
-        file_put_contents('users.txt', $inputUser . '|' . $hashedPass . PHP_EOL, FILE_APPEND);
+        $saved = file_put_contents($userFile, $inputUser . '|' . $hashedPass . PHP_EOL, FILE_APPEND | LOCK_EX);
         
-        session_regenerate_id(true);
-        $_SESSION['authorized'] = true;
-        $_SESSION['username'] = htmlspecialchars($inputUser);
-        header("Location: game-show.php");
+        if ($saved === false) {
+            $feedback = "Unable to create account. Gain PHP permissions and Try again";
+            break;        
+        }
+
+        $_SESSION['signup_success'] = 'Trainer has been made! PLease Log in.';
+        header("Location: login.php");
         exit();
         
     } while(false);
@@ -47,12 +67,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h2>Create Trainer Account</h2>
     
     <?php if ($feedback): ?>
-        <p style="color: red;"><?php echo $feedback; ?></p>
+        <p style="color: red;"><?php echo htmlspecialchars($feedback, ENT_QUOTES, 'UTF-8'); ?></p>
     <?php endif; ?>
 
     <form method="POST">
         <label>Choose Username</label><br>
-        <input type="text" name="username"><br><br>
+        <input type="text" name="username" value="<?php echo htmlspecialchars($inputUser ?? '', ENT_QUOTES, 'UTF-8'); ?>"><br><br>
         
         <label>Choose Password</label><br>
         <input type="password" name="password"><br><br>

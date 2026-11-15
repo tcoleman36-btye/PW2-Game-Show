@@ -6,7 +6,15 @@ if (!isset($_SESSION['authorized']) || $_SESSION['authorized'] !== true) {
     exit();
 }
 
-//Applying a Cookie to the introduction
+// logout
+if (isset($_GET['action']) && $_GET['action'] === 'logout') {
+    session_unset();
+    session_destroy();
+    header("Location: login.php");
+    exit();
+}
+
+//Applying a Cookie to the introduction, that way the header will welcome the user
 
 $user = $_SESSION['username'];
 
@@ -48,19 +56,31 @@ setcookie('lastVisit', date('F j, Y g:i A'), [
             </header>
         </div>
 
-        <section id="rule-box">
-            <div rule-content>
-                <ol>
-                    <li>A Question prompt will screen, the players will type a guess on the search bar, get it correct and earn points.</li>
-                    <li>Each player will have 3 trys </li>
-                </ol>
-            </div>
+        <main>
 
-        </section>
+            <section id="rule-box">
+               <div rule-content>
+                  <ul>
+                     <li>A Question prompt will appear on screen, once it does, players wil type a guess on the search bar to earn points.</li>
+                     <li>Each player will have 3 attempts to gain points, guess wrong and get a strike. </li>
+                     <li>Once a player gets 3 strikes, the other player gets one attempt to steal points.</li>
+                     <li>High points players have the option to skip their turn to give the other player a go.</li>
+                     <li>The Player with most points wins the game.</li>
+                  </ul>
+                </div>
 
-        <aside class="logout-box">
+            </section>
 
-        </aside>
+            <section>
+              <div class="start_button">
+                 <a href="game-show.php">Start The Game</a>
+              </div>
+            </section>
 
+            <aside class="logout-box">
+                <a href="?action=logout" class="logout-link">Log Out</a>
+            </aside>
+
+        </main>
     </body>
 </html>

@@ -3,10 +3,12 @@ session_start();
 $feedback = "";
 
 function loadUserDatabase() {
-    if (!file_exists('users.txt')) return [];
+    $usersFile = __DIR__ . '/users.txt';
+
+    if (!file_exists($usersFile)) return [];
     
     $records = [];
-    $lines = file('users.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    $lines = file($usersFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     foreach ($lines as $line) {
         [$u, $h] = explode('|', $line . '|'); 
         if (!empty($u) && !empty($h)) {
@@ -29,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             session_regenerate_id(true);
             $_SESSION['authorized'] = true;
             $_SESSION['username'] = htmlspecialchars($inputUser);
-            header("Location: game-show.php");
+            header("Location: introduction.php");
             exit();
         } else {
             $feedback = "Invalid username or password.";
