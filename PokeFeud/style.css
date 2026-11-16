@@ -1,0 +1,36 @@
+html.login,
+html.signin {
+    background-image: url("./background-&-host/Pokeball.jpg");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.login-container {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    padding: 35px;
+    font-size: 30px;
+    text-align: left;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.login-container button {
+    padding: 7px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+a {
+    color: blue;
+}

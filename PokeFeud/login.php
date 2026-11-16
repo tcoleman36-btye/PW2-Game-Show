@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="login">
 <head>
      <meta charset="UTF-8">
      <meta name="description" content="Log in screen for gameshow">
@@ -54,11 +54,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h2>Trainer Login</h2>
 
     <?php if ($success): ?>
-        <p style="color: green;"><?php echo htmlspecialchars($success, ENT_QUOTES, 'UTF-8'); ?></p>
+        <p style="color: #36ff2f;"><?php echo htmlspecialchars($success, ENT_QUOTES, 'UTF-8'); ?></p>
     <?php endif; ?>
     
     <?php if ($feedback): ?>
-        <p style="color: red;"><?php echo htmlspecialchars($feedback, ENT_QUOTES, 'UTF-8'); ?></p>
+        <p style="color: #FFFF00 ;"><?php echo htmlspecialchars($feedback, ENT_QUOTES, 'UTF-8'); ?></p>
     <?php endif; ?>
 
     <form method="POST">
