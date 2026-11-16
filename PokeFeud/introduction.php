@@ -81,6 +81,7 @@ setcookie('lastVisit', date('F j, Y g:i A'), [
                 <a href="?action=logout" class="logout-link">Log Out</a>
             </aside>
 
+
         </main>
     </body>
 </html>
