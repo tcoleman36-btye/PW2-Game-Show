@@ -1,6 +1,8 @@
 <?php
 session_start();
 $feedback = "";
+$success = $_SESSION['signup_success'] ?? '';
+unset($_SESSION['signup_success']);
 
 function loadUserDatabase() {
     $usersFile = __DIR__ . '/users.txt';
@@ -50,9 +52,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 <div class="login-container">
     <h2>Trainer Login</h2>
+
+    <?php if ($success): ?>
+        <p style="color: green;"><?php echo htmlspecialchars($success, ENT_QUOTES, 'UTF-8'); ?></p>
+    <?php endif; ?>
     
     <?php if ($feedback): ?>
-        <p style="color: red;"><?php echo $feedback; ?></p>
+        <p style="color: red;"><?php echo htmlspecialchars($feedback, ENT_QUOTES, 'UTF-8'); ?></p>
     <?php endif; ?>
 
     <form method="POST">
