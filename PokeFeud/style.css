@@ -38,19 +38,6 @@ a {
 
 /*Introduction PHP*/
 
-html .intro,
-body #content-box {
-    min-height: 100%;
-    margin: 0;
-}
-
-#content-box {
-    min-height: 100vh;
-    position: relative;
-    padding-bottom: 80px;
-    box-sizing: border-box;
-}
-
 .intro-box {
     text-align: center;
     border: solid red;
@@ -102,6 +89,5 @@ li {
 
 .logout-box {
     position: absolute;
-    top: 20px;
     right: 30px;
 }

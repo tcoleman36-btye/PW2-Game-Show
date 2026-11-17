@@ -76,12 +76,11 @@ setcookie('lastVisit', date('F j, Y g:i A'), [
                  <a href="game-show.php">Start The Game</a>
                 </div>
             </section>
-
-            <aside class="logout-box">
-                <a href="?action=logout" class="logout-link">Log Out</a>
-            </aside>
-
-
         </main>
+
+        <aside class="logout-box">
+            <a href="?action=logout" class="logout-link">Log Out</a>
+        </aside>
+
     </body>
 </html>
