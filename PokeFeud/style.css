@@ -1,3 +1,4 @@
+/*Sign in and log in*/
 html.login,
 html.signin {
     background-image: url("./background-&-host/Pokeball.jpg");
@@ -35,3 +36,72 @@ a {
     color: blue;
 }
 
+/*Introduction PHP*/
+
+html .intro,
+body #content-box {
+    min-height: 100%;
+    margin: 0;
+}
+
+#content-box {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+}
+
+.intro-box {
+    text-align: center;
+    border: solid red;
+    padding: 10px 35px;
+    margin: 54px auto;
+    width: fit-content;
+    background-color: red;
+    color: white;
+}
+
+ul {
+    width: fit-content;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 15px
+}
+
+.rule-content {
+    border: black solid;
+    background-color: white;
+    margin: 54px auto;
+    width: fit-content;
+    padding: 40px 35px;
+}
+
+.start-game {
+    text-align: center;
+    margin: 30px;
+}
+
+.start_button a {
+    display: inline-block;
+    background-color: #cc0000;
+    color: white;
+    padding: 15px 35px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.start_button a:hover {
+    background-color: #7e0494;
+    transform: scale(1.05);
+}
+
+.logout-box {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}

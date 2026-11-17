@@ -40,7 +40,7 @@ setcookie('lastVisit', date('F j, Y g:i A'), [
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="intro">
     <head>
         <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,17 +49,17 @@ setcookie('lastVisit', date('F j, Y g:i A'), [
          <link rel="stylesheet" href="style.css">
     </head>
     
-    <body>
-        <div class="intro_box">
-            <header>
-              <h1 class="Welcome-box"><?= htmlspecialchars($welcomeBack, ENT_QUOTES, 'UTF-8') ?></h1>
-            </header>
-        </div>
+    <body id="content-box">
+        
+        <header class="intro-box">
+              <h1 class="Welcome"><?= htmlspecialchars($welcomeBack, ENT_QUOTES, 'UTF-8') ?></h1>
+        </header>
+        
 
         <main>
 
             <section id="rule-box">
-               <div rule-content>
+               <div class="rule-content">
                   <ul>
                      <li>A Question prompt will appear on screen, once it does, players wil type a guess on the search bar to earn points.</li>
                      <li>Each player will have 3 attempts to gain points, guess wrong and get a strike. </li>
@@ -71,10 +71,10 @@ setcookie('lastVisit', date('F j, Y g:i A'), [
 
             </section>
 
-            <section>
-              <div class="start_button">
+            <section class="start-game">
+                <div class="start_button">
                  <a href="game-show.php">Start The Game</a>
-              </div>
+                </div>
             </section>
 
             <aside class="logout-box">

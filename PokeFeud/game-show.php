@@ -15,6 +15,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
 
 if (isset($_POST['action']) && $_POST['action'] === 'reset_game') {
     unset($_SESSION['game']);
+    unset($_SESSION['score_saved']);
     header("Location: " . $_SERVER['PHP_SELF']);
     exit();
 }
