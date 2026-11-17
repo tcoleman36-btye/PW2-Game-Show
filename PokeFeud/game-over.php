@@ -34,10 +34,10 @@ $aiScore = $gameState['ai_score'] ?? 0;
 
 if ($playerScore > $aiScore) {
     $winner = $username . ' Wins';
-    $winnerImage = 'players/Win_Nurse.png';
+    $winnerImage = 'Players/Win_Nurse.png';
 } elseif ($aiScore > $playerScore) {
     $winner = 'Rival Wins!';
-    $winnerImage = 'players/Win_Officer.png';
+    $winnerImage = 'Players/Win_Officer.png';
 } else {
     $winner = 'Tie!';
     $winnerImage = 'background-&-host/Host_confused.png';
@@ -45,6 +45,7 @@ if ($playerScore > $aiScore) {
 
 //Stores the the scores in a text file
 $scoreboard = __DIR__ . '/score.txt';
+
 $scores = [];
 
 if (!isset($_SESSION['score_saved'])) {
@@ -55,6 +56,9 @@ if (!isset($_SESSION['score_saved'])) {
 
     if ($saved !== false) {
         $_SESSION['score_saved'] = true;
+        echo "Score was saved!";
+    } else {
+        echo "ERROR: unable to save score";
     }
 }
 
