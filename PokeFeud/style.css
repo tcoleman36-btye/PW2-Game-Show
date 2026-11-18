@@ -129,3 +129,78 @@ li {
     background-color: #7e0494;
     transform: scale(1.05);
 }
+
+@media (max-width: 900px) {
+    body.login,
+    body.signin {
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        min-height: 100vh;
+    }
+
+    .login-container {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 90%;
+        max-width: 400px;
+        box-sizing: border-box;
+        margin: 50px auto;
+        padding: 25px;
+        font-size: 22px;
+    }
+
+    .login-container button {
+        font-size: 18px;
+    }
+
+    #content-box {
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    }
+
+    .intro-box {
+        box-sizing: border-box;
+        width: 90%;
+        margin: 30xp auto;
+        padding: 15px;
+    }
+
+    .rule-content {
+        box-sizing: border-box;
+        width: 90%;
+        margin: 30px auto;
+        padding: 25px 20px;
+    }
+
+    ul {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 25px;
+    }
+
+    li {
+        margin-bottom: 12px;
+    }
+
+    .start-game {
+        margin: 20px
+    }
+
+    .start_button a {
+        font-size: 20px;
+        padding: 12px 25px;
+    }
+
+    .logout-box {
+        right: 15px;
+    }
+
+    .logout-link {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
