@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,15 +68,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h2>Create Trainer Account</h2>
     
     <?php if ($feedback): ?>
-        <p style="color: #fffb00f6;"><?php echo htmlspecialchars($feedback, ENT_QUOTES, 'UTF-8'); ?></p>
+        <p role="alert" style="color: #fffb00f6;"><?php echo htmlspecialchars($feedback, ENT_QUOTES, 'UTF-8'); ?></p>
     <?php endif; ?>
 
     <form method="POST">
-        <label>Choose Username</label><br>
-        <input type="text" name="username" value="<?php echo htmlspecialchars($inputUser ?? '', ENT_QUOTES, 'UTF-8'); ?>"><br><br>
+        <label for="new-username">Choose Username</label><br>
+        <input type="text" id="new-username" name="username" autocomplete="username" required value="<?php echo htmlspecialchars($inputUser ?? '', ENT_QUOTES, 'UTF-8'); ?>"><br><br>
         
-        <label>Choose Password</label><br>
-        <input type="password" name="password"><br><br>
+        <label for="new-password">Choose Password</label><br>
+        <input type="password" id="new-password" name="password" autocomplete="new-password" required><br><br>
         
         <button type="submit">Register & Play</button>
     </form>

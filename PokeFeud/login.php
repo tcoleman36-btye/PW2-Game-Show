@@ -20,6 +20,7 @@ function loadUserDatabase() {
     return $records;
 }
 
+$inputUser = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $inputUser = trim($_POST['username'] ?? '');
     $inputPass = $_POST['password'] ?? '';
@@ -32,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($users[$inputUser]) && password_verify($inputPass, $users[$inputUser])) {
             session_regenerate_id(true);
             $_SESSION['authorized'] = true;
-            $_SESSION['username'] = htmlspecialchars($inputUser);
+            $_SESSION['username'] = $inputUser;
             header("Location: introduction.php");
             exit();
         } else {
@@ -45,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <head>
      <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta name="description" content="Log in screen for gameshow">
      <title>Pokefeud - Login</title>
      <link rel="stylesheet" href="style.css">
@@ -54,19 +56,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h2>Trainer Login</h2>
 
     <?php if ($success): ?>
-        <p style="color: #36ff2f;"><?php echo htmlspecialchars($success, ENT_QUOTES, 'UTF-8'); ?></p>
+        <p role="status" style="color: #36ff2f;"><?php echo htmlspecialchars($success, ENT_QUOTES, 'UTF-8'); ?></p>
     <?php endif; ?>
     
     <?php if ($feedback): ?>
-        <p style="color: #FFFF00 ;"><?php echo htmlspecialchars($feedback, ENT_QUOTES, 'UTF-8'); ?></p>
+        <p role="alert" style="color: #FFFF00 ;"><?php echo htmlspecialchars($feedback, ENT_QUOTES, 'UTF-8'); ?></p>
     <?php endif; ?>
 
     <form method="POST">
-        <label>Username</label><br>
-        <input type="text" name="username" value="<?php echo htmlspecialchars($inputUser ?? ''); ?>"><br><br>
+        <label for="username">Username</label><br>
+        <input type="text" id="username" name="username" autocomplete="username" required value="<?php echo htmlspecialchars($inputUser ?? '', ENT_QUOTES, 'UTF-8'); ?>"><br><br>
         
-        <label>Password</label><br>
-        <input type="password" name="password"><br><br>
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" autocomplete="current-password" required><br><br>
         
         <button type="submit">Log In</button>
     </form>
