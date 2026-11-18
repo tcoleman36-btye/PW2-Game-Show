@@ -22,3 +22,7 @@ Test 3 Scoreboard: This is to test if the player's score would update in the lea
 
 Test 3 Result: After finishing the game, the learderboad did not update, and the win image did not display it's image.
 
+Test 3 fix: Gave codd permission to read the score  directory.
+
+Test 4 Failed Points: If the ai fails to steal points from the player, the player should keep the points
+

@@ -53,13 +53,6 @@ if (!isset($_SESSION['score_saved'])) {
     $username . '|' . $playerScore . PHP_EOL,
     FILE_APPEND | LOCK_EX
     );
-
-    if ($saved !== false) {
-        $_SESSION['score_saved'] = true;
-        echo "Score was saved!";
-    } else {
-        echo "ERROR: unable to save score";
-    }
 }
 
 if (file_exists($scoreboard)) {
@@ -97,7 +90,7 @@ $scores = array_slice($scores, 0, 19);
 
     <body>
 
-        <header>
+        <header class="game-over">
           <h1>Game Over</h1>
         </header>
 
@@ -112,7 +105,7 @@ $scores = array_slice($scores, 0, 19);
                 </div>
 
                 <div class="breakdown">
-                
+                    <h2>Break Down</h2>
                     <div class ="player-score">
                       <h3><?php echo htmlspecialchars($_SESSION['username'], ENT_QUOTES, 'UTF-8'); ?> </h3>
                        <p><?php echo $playerScore; ?> points</p>
@@ -128,24 +121,32 @@ $scores = array_slice($scores, 0, 19);
         
             <aside class="leaderboard">
               <h2>leaderboard &#127942</h2>
-                <?php if (empty($scores)):?>
-                 <p>...</p> <!--Ellipse indicates there is no score-->
-                <?php else: ?>
-                    <?php foreach ($scores as $index => $entry): ?>
-                        <div class="board_entry">
-                            <span>
-                             <?php echo $index + 1; ?>.
-                             <?php echo htmlspecialchars($entry['username'], ENT_QUOTES, 'UTF-8'); ?>
+                <?php for ($i = 0; $i < 19; $i++):?>
+                    <div class="board_entry">
+
+                        <span class="rank">
+                          <?php echo $i + 1; ?>.
+                        </span>
+
+                        <?php if (isset($scores[$i])): ?>
+                            <span class="board_name">
+                                <?php echo htmlspecialchars($scores[$i]['username'], ENT_QUOTES, 'UTF-8'); ?>
                             </span>
 
-                            <span>
-                                <?php echo $entry['score']; ?> points
+                            <span class="board_score">
+                                <?php echo $scores[$i]['score']; ?>
                             </span>
-                        </div>
-                    <?php endforeach; ?>
-                <?php endif; ?>
+
+                        <?php else: ?>
+                            <span class="board_name">...</span>
+                            <span class="board_score">...</span>
+                        <?php endif; ?>
+                    </div>
+                <?php endfor; ?>
                   
             </aside>
+        </main>
+
 
             <div class="playagain">
                 <form method="POST">
@@ -154,11 +155,9 @@ $scores = array_slice($scores, 0, 19);
                 </form>
             </div>
 
-            <div>
+            <div class="logout-box">
               <a href="?action=logout" class="logout-link">Log Out</a>
             </div>
-
-        </main>
 
     </body>
 </html>
