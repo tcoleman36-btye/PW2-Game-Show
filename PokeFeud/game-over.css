@@ -15,6 +15,7 @@ body{
     background-repeat: round;
     background-attachment: fixed;
     background-position: center;
+    color:yellow
 }
 
 .game-over {
@@ -38,7 +39,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin: 70px;
+    margin: 100px 100px;
     background-color: red;
 }
 
@@ -72,7 +73,7 @@ main {
     align-items: center;
     gap: 25px;
     text-align: center;
-    margin: 35px 100px;
+    margin: 99px 100px;
     padding: 15px;
     background-color: aliceblue;
     color: black;
@@ -89,7 +90,7 @@ h3 {
     border: 2px solid white;
     padding: 15px;
     width: 300px;
-    margin: 70px;
+    margin: 70px auto;
     background-color: red;
     color: black;
 }
@@ -134,7 +135,8 @@ h3 {
     text-decoration: none;
     transition: 0.3s;
     position: absolute;
-    left: 670px;
+    left: 700px;
+    top: 700px;
 }
 
 .playagain button:hover {
