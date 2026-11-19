@@ -22,79 +22,79 @@ if (isset($_POST['action']) && $_POST['action'] === 'reset_game') {
 
 $qBank = [
     0 => [
-        'prompt'  => 'Name something people pack when going on a beach vacation.',
+        'prompt'  => 'Name a pokemon you would expect to see on the beach.',
         'answers' => [
-            1 => ['text' => 'Sunscreen',    'points' => 35],
-            2 => ['text' => 'Towel',        'points' => 30],
-            3 => ['text' => 'Swimsuit',     'points' => 20],
-            4 => ['text' => 'Sunglasses',   'points' => 15],
-            5 => ['text' => 'Your Pokemon', 'points' => 10],
-            6 => ['text' => 'Cooler',       'points' => 8],
-            7 => ['text' => 'Flip-flops',   'points' => 5],
-            8 => ['text' => 'Hat',          'points' => 2]
+            1 => ['text' => 'Magikarp',  'points' => 35],
+            2 => ['text' => 'Goldeen',      'points' => 30],
+            3 => ['text' => 'Lapras',   'points' => 20],
+            4 => ['text' => 'Wailord', 'points' => 15],
+            5 => ['text' => 'Clamperl',   'points' => 10],
+            6 => ['text' => 'krabby',     'points' => 8],
+            7 => ['text' => 'sandygast', 'points' => 5],
+            8 => ['text' => 'Octillery',  'points' => 2]
         ],
-        'wrong_answers' => ['Winter parka', 'Snowshoes', 'Ice scraper', 'Ski goggles'],
-        'funny_answers' => ['An entire refrigerator', 'A random boulder', 'A pet polar bear', 'A microwave']
+        'wrong_answers' => ['Jigglypuff', 'Mewtwo', 'Kyore', 'Vulpix'],
+        'funny_answers' => ['IT IS PIKACHU', 'Voltorb', 'Groudon', 'Rayquaza']
     ],
     1 => [
-        'prompt'  => 'Name something a Pokemon Trainer carries in their bag.',
+        'prompt'  => 'Name a pokemon that appears to wears clothes.',
         'answers' => [
-            1 => ['text' => 'Poke Ball',   'points' => 35],
-            2 => ['text' => 'Potion',      'points' => 25],
-            3 => ['text' => 'Pokedex',     'points' => 20],
-            4 => ['text' => 'Berries',     'points' => 10],
-            5 => ['text' => 'Revive',      'points' => 5],
-            6 => ['text' => 'Rare Candy',  'points' => 3],
-            7 => ['text' => 'Repel',       'points' => 1],
-            8 => ['text' => 'Town Map',    'points' => 1]
+            1 => ['text' => 'Gardevoir',    'points' => 40],
+            2 => ['text' => 'Mr. Mine',       'points' => 25],
+            3 => ['text' => 'Jynx',      'points' => 15],
+            4 => ['text' => 'Froslass',     'points' => 10],
+            5 => ['text' => 'Cinderace',    'points' => 5],
+            6 => ['text' => 'Brionee',    'points' => 3],
+            7 => ['text' => 'Aromatisse',  'points' => 1],
+            8 => ['text' => 'Lurantis',      'points' => 1]
         ],
-        'wrong_answers' => ['Lawn mower', 'Bowling ball', 'Surfboard', 'Grand piano'],
-        'funny_answers' => ['A live Snorlax', 'A kitchen sink', 'An entire Pokemon Center', 'Building bricks']
+        'wrong_answers' => ['Ditto', 'Gohitelle', 'Bellibot', 'Armarouge'],
+        'funny_answers' => ['IT IS PIKACHU', 'JigglySwift', 'Rotom', 'Falink in a trenchcoat']
     ],
     2 => [
-        'prompt'  => 'Name a Pokemon that could assist you in the kitchen.',
+        'prompt'  => 'Name a pokemon that would assist around the house.',
         'answers' => [
-            1 => ['text' => 'Minccino',    'points' => 35],
-            2 => ['text' => 'Rotom',       'points' => 25],
-            3 => ['text' => 'Machamp',     'points' => 20],
-            4 => ['text' => 'Bergmite',    'points' => 10],
-            5 => ['text' => 'Ditto',       'points' => 5],
-            6 => ['text' => 'Greedent',    'points' => 3],
-            7 => ['text' => 'Charizard',   'points' => 1],
-            8 => ['text' => "Farfetch'd",  'points' => 1]
+            1 => ['text' => 'Minccino', 'points' => 35],
+            2 => ['text' => 'Rotom',        'points' => 25],
+            3 => ['text' => 'Quaxly',         'points' => 20],
+            4 => ['text' => 'Machamp',    'points' => 10],
+            5 => ['text' => 'Farfetchd',        'points' => 5],
+            6 => ['text' => 'Kadabra',        'points' => 3],
+            7 => ['text' => 'Meowth',        'points' => 1],
+            8 => ['text' => 'Klekey',         'points' => 1]
         ],
-        'wrong_answers' => ['Onix', 'Zubat', 'Ekans', 'Geodude'],
-        'funny_answers' => ['Snorlax', 'Magikarp', 'Wailord', 'Gyarados']
+        'wrong_answers' => ['Charazard', 'Turtonator', 'Jigglypuff', 'Gengar'],
+        'funny_answers' => ['Trubbish', 'PIKACHU', 'Drampa', 'Kyurem']
     ],
     3 => [
-        'prompt'  => 'Name a Pokemon that most people would recognize.',
+        'prompt'  => 'Name a pokemon you would expect to see in a cereal box.',
         'answers' => [
-            1 => ['text' => 'Pikachu',     'points' => 35],
-            2 => ['text' => 'Charmander',  'points' => 25],
-            3 => ['text' => 'Squirtle',    'points' => 20],
-            4 => ['text' => 'Bulbasaur',   'points' => 10],
-            5 => ['text' => 'Eevee',       'points' => 5],
-            6 => ['text' => 'Jigglypuff',  'points' => 3],
-            7 => ['text' => 'Snorlax',     'points' => 1],
-            8 => ['text' => 'Mewtwo',      'points' => 1]
+            1 => ['text' => 'Pikachu', 'points' => 35],
+            2 => ['text' => 'Charmander', 'points' => 25],
+            3 => ['text' => 'Squirtle',  'points' => 20],
+            4 => ['text' => 'Bulbasaur', 'points' => 10],
+            5 => ['text' => 'Eevee',      'points' => 5],
+            6 => ['text' => 'Meowth',       'points' => 3],
+            7 => ['text' => 'Psyduck',     'points' => 1],
+            8 => ['text' => 'Mewtwo',    'points' => 1]
         ],
-        'wrong_answers' => ['Mario', 'Sonic', 'Kirby', 'Link'],
-        'funny_answers' => ['My neighbor Steve', 'A toaster', 'A potato', 'Garfield']
+        'wrong_answers' => ['Turtwig', 'Blaziken', 'Pachirisu', 'Budew'],
+        'funny_answers' => ['NOT PIKACHU', 'Pikablue', 'Professor Oak', 'Groudon']
     ],
     4 => [
-        'prompt'  => 'Name a Pokemon type.',
+        'prompt'  => 'Name a pokemon that would give a kid nightmares.',
         'answers' => [
-            1 => ['text' => 'Water',       'points' => 35],
-            2 => ['text' => 'Fire',        'points' => 25],
-            3 => ['text' => 'Grass',       'points' => 20],
-            4 => ['text' => 'Electric',    'points' => 10],
-            5 => ['text' => 'Psychic',     'points' => 5],
-            6 => ['text' => 'Dragon',      'points' => 3],
-            7 => ['text' => 'Ghost',       'points' => 1],
-            8 => ['text' => 'Normal',      'points' => 1]
+            1 => ['text' => 'Darkrai',       'points' => 35],
+            2 => ['text' => 'Guzzlord','points' => 25],
+            3 => ['text' => 'Hypno',     'points' => 20],
+            4 => ['text' => 'Trevenant',       'points' => 10],
+            5 => ['text' => 'Lickwick',   'points' => 5],
+            6 => ['text' => 'Gourgeist',       'points' => 3],
+            7 => ['text' => 'Mismagius',         'points' => 1],
+            8 => ['text' => 'Mimikyu',          'points' => 1]
         ],
-        'wrong_answers' => ['Sand', 'Plastic', 'Wooden', 'Glass'],
-        'funny_answers' => ['Pizza', 'Banana', 'Disco', 'Spaghetti']
+        'wrong_answers' => ['Slowpoke', 'Cubone', 'Magikarp', 'Bouffalant'],
+        'funny_answers' => ['Totodile using scary face', 'Trees', 'A falling Chandelure', 'cake']
     ]
 ];
 
