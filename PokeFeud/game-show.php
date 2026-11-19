@@ -22,79 +22,79 @@ if (isset($_POST['action']) && $_POST['action'] === 'reset_game') {
 
 $qBank = [
     0 => [
-        'prompt'  => 'Name something people pack when going on a beach vacation.',
+        'prompt'  => 'Name a pokemon you would expect to see on the beach.',
         'answers' => [
-            1 => ['text' => 'Sunscreen',  'points' => 35],
-            2 => ['text' => 'Towel',      'points' => 30],
-            3 => ['text' => 'Swimsuit',   'points' => 20],
-            4 => ['text' => 'Sunglasses', 'points' => 15],
-            5 => ['text' => 'Umbrella',   'points' => 10],
-            6 => ['text' => 'Cooler',     'points' => 8],
-            7 => ['text' => 'Flip-flops', 'points' => 5],
-            8 => ['text' => 'Hat',        'points' => 2]
+            1 => ['text' => 'Magikarp',  'points' => 35],
+            2 => ['text' => 'Goldeen',      'points' => 30],
+            3 => ['text' => 'Lapras',   'points' => 20],
+            4 => ['text' => 'Wailord', 'points' => 15],
+            5 => ['text' => 'Clamperl',   'points' => 10],
+            6 => ['text' => 'krabby',     'points' => 8],
+            7 => ['text' => 'sandygast', 'points' => 5],
+            8 => ['text' => 'Octillery',  'points' => 2]
         ],
-        'wrong_answers' => ['Winter parka', 'Snowshoes', 'Ice scraper', 'Ski goggles'],
-        'funny_answers' => ['An entire refrigerator', 'A random boulder', 'A pet polar bear', 'A microwave']
+        'wrong_answers' => ['Jigglypuff', 'Mewtwo', 'Kyore', 'Vulpix'],
+        'funny_answers' => ['IT IS PIKACHU', 'Voltorb', 'Groudon', 'Rayquaza']
     ],
     1 => [
-        'prompt'  => 'Name something people buy or eat at a movie theater.',
+        'prompt'  => 'Name a pokemon that appears to wears clothes.',
         'answers' => [
-            1 => ['text' => 'Popcorn',    'points' => 40],
-            2 => ['text' => 'Soda',       'points' => 25],
-            3 => ['text' => 'Candy',      'points' => 15],
-            4 => ['text' => 'Nachos',     'points' => 10],
-            5 => ['text' => 'Hot dog',    'points' => 5],
-            6 => ['text' => 'Pretzel',    'points' => 3],
-            7 => ['text' => 'Ice cream',  'points' => 1],
-            8 => ['text' => 'Water',      'points' => 1]
+            1 => ['text' => 'Gardevoir',    'points' => 40],
+            2 => ['text' => 'Mr. Mine',       'points' => 25],
+            3 => ['text' => 'Jynx',      'points' => 15],
+            4 => ['text' => 'Froslass',     'points' => 10],
+            5 => ['text' => 'Cinderace',    'points' => 5],
+            6 => ['text' => 'Brionee',    'points' => 3],
+            7 => ['text' => 'Aromatisse',  'points' => 1],
+            8 => ['text' => 'Lurantis',      'points' => 1]
         ],
-        'wrong_answers' => ['Car engine', 'Scribble pad', 'Garden hose', 'Anvil'],
-        'funny_answers' => ['A live turkey', 'A kitchen sink', 'Washing machine', 'Building bricks']
+        'wrong_answers' => ['Ditto', 'Gohitelle', 'Bellibot', 'Armarouge'],
+        'funny_answers' => ['IT IS PIKACHU', 'JigglySwift', 'Rotom', 'Falink in a trenchcoat']
     ],
     2 => [
-        'prompt'  => 'Name something you would find in almost every kitchen.',
+        'prompt'  => 'Name a pokemon that would assist around the house.',
         'answers' => [
-            1 => ['text' => 'Refrigerator', 'points' => 35],
-            2 => ['text' => 'Stove',        'points' => 25],
-            3 => ['text' => 'Sink',         'points' => 20],
-            4 => ['text' => 'Microwave',    'points' => 10],
-            5 => ['text' => 'Knife',        'points' => 5],
-            6 => ['text' => 'Plate',        'points' => 3],
-            7 => ['text' => 'Spoon',        'points' => 1],
-            8 => ['text' => 'Fork',         'points' => 1]
+            1 => ['text' => 'Minccino', 'points' => 35],
+            2 => ['text' => 'Rotom',        'points' => 25],
+            3 => ['text' => 'Quaxly',         'points' => 20],
+            4 => ['text' => 'Machamp',    'points' => 10],
+            5 => ['text' => 'Farfetchd',        'points' => 5],
+            6 => ['text' => 'Kadabra',        'points' => 3],
+            7 => ['text' => 'Meowth',        'points' => 1],
+            8 => ['text' => 'Klekey',         'points' => 1]
         ],
-        'wrong_answers' => ['Airplane wing', 'Traffic light', 'Anchor', 'Snowboard'],
-        'funny_answers' => ['Roller coaster', 'Swimming pool', 'A live dinosaur', 'Spaceship']
+        'wrong_answers' => ['Charazard', 'Turtonator', 'Jigglypuff', 'Gengar'],
+        'funny_answers' => ['Trubbish', 'PIKACHU', 'Drampa', 'Kyurem']
     ],
     3 => [
-        'prompt'  => 'Name something people do immediately after waking up in the morning.',
+        'prompt'  => 'Name a pokemon you would expect to see in a cereal box.',
         'answers' => [
-            1 => ['text' => 'Brush teeth', 'points' => 35],
-            2 => ['text' => 'Drink coffee', 'points' => 25],
-            3 => ['text' => 'Check phone',  'points' => 20],
-            4 => ['text' => 'Go to bathroom','points' => 10],
-            5 => ['text' => 'Stretch',      'points' => 5],
-            6 => ['text' => 'Shower',       'points' => 3],
-            7 => ['text' => 'Make bed',     'points' => 1],
-            8 => ['text' => 'Exercise',     'points' => 1]
+            1 => ['text' => 'Pikachu', 'points' => 35],
+            2 => ['text' => 'Charmander', 'points' => 25],
+            3 => ['text' => 'Squirtle',  'points' => 20],
+            4 => ['text' => 'Bulbasaur', 'points' => 10],
+            5 => ['text' => 'Eevee',      'points' => 5],
+            6 => ['text' => 'Meowth',       'points' => 3],
+            7 => ['text' => 'Psyduck',     'points' => 1],
+            8 => ['text' => 'Mewtwo',    'points' => 1]
         ],
-        'wrong_answers' => ['Sleep for 8 hours', 'Go to sleep', 'Put on pajamas', 'Dream'],
-        'funny_answers' => ['Fight a dragon', 'Eat a brick', 'Fly away', 'Teleport']
+        'wrong_answers' => ['Turtwig', 'Blaziken', 'Pachirisu', 'Budew'],
+        'funny_answers' => ['NOT PIKACHU', 'Pikablue', 'Professor Oak', 'Groudon']
     ],
     4 => [
-        'prompt'  => 'Name something people pack when going on a road trip.',
+        'prompt'  => 'Name a pokemon that would give a kid nightmares.',
         'answers' => [
-            1 => ['text' => 'Snacks',       'points' => 35],
-            2 => ['text' => 'Phone charger','points' => 25],
-            3 => ['text' => 'Playlist',     'points' => 20],
-            4 => ['text' => 'Drinks',       'points' => 10],
-            5 => ['text' => 'Sunglasses',   'points' => 5],
-            6 => ['text' => 'Pillow',       'points' => 3],
-            7 => ['text' => 'Cash',         'points' => 1],
-            8 => ['text' => 'Map',          'points' => 1]
+            1 => ['text' => 'Darkrai',       'points' => 35],
+            2 => ['text' => 'Guzzlord','points' => 25],
+            3 => ['text' => 'Hypno',     'points' => 20],
+            4 => ['text' => 'Trevenant',       'points' => 10],
+            5 => ['text' => 'Lickwick',   'points' => 5],
+            6 => ['text' => 'Gourgeist',       'points' => 3],
+            7 => ['text' => 'Mismagius',         'points' => 1],
+            8 => ['text' => 'Mimikyu',          'points' => 1]
         ],
-        'wrong_answers' => ['Anchor', 'Boat motor', 'Submarine hatch', 'Airplane wing'],
-        'funny_answers' => ['A live elephant', 'Kitchen sink', 'Swimming pool', 'Roller coaster']
+        'wrong_answers' => ['Slowpoke', 'Cubone', 'Magikarp', 'Bouffalant'],
+        'funny_answers' => ['Totodile using scary face', 'Trees', 'A falling Chandelure', 'cake']
     ]
 ];
 
