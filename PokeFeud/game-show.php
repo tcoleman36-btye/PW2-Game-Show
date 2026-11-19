@@ -24,77 +24,77 @@ $qBank = [
     0 => [
         'prompt'  => 'Name something people pack when going on a beach vacation.',
         'answers' => [
-            1 => ['text' => 'Sunscreen',  'points' => 35],
-            2 => ['text' => 'Towel',      'points' => 30],
-            3 => ['text' => 'Swimsuit',   'points' => 20],
-            4 => ['text' => 'Sunglasses', 'points' => 15],
-            5 => ['text' => 'Umbrella',   'points' => 10],
-            6 => ['text' => 'Cooler',     'points' => 8],
-            7 => ['text' => 'Flip-flops', 'points' => 5],
-            8 => ['text' => 'Hat',        'points' => 2]
+            1 => ['text' => 'Sunscreen',    'points' => 35],
+            2 => ['text' => 'Towel',        'points' => 30],
+            3 => ['text' => 'Swimsuit',     'points' => 20],
+            4 => ['text' => 'Sunglasses',   'points' => 15],
+            5 => ['text' => 'Your Pokemon', 'points' => 10],
+            6 => ['text' => 'Cooler',       'points' => 8],
+            7 => ['text' => 'Flip-flops',   'points' => 5],
+            8 => ['text' => 'Hat',          'points' => 2]
         ],
         'wrong_answers' => ['Winter parka', 'Snowshoes', 'Ice scraper', 'Ski goggles'],
         'funny_answers' => ['An entire refrigerator', 'A random boulder', 'A pet polar bear', 'A microwave']
     ],
     1 => [
-        'prompt'  => 'Name something people buy or eat at a movie theater.',
+        'prompt'  => 'Name something a Pokemon Trainer carries in their bag.',
         'answers' => [
-            1 => ['text' => 'Popcorn',    'points' => 40],
-            2 => ['text' => 'Soda',       'points' => 25],
-            3 => ['text' => 'Candy',      'points' => 15],
-            4 => ['text' => 'Nachos',     'points' => 10],
-            5 => ['text' => 'Hot dog',    'points' => 5],
-            6 => ['text' => 'Pretzel',    'points' => 3],
-            7 => ['text' => 'Ice cream',  'points' => 1],
-            8 => ['text' => 'Water',      'points' => 1]
+            1 => ['text' => 'Poke Ball',   'points' => 35],
+            2 => ['text' => 'Potion',      'points' => 25],
+            3 => ['text' => 'Pokedex',     'points' => 20],
+            4 => ['text' => 'Berries',     'points' => 10],
+            5 => ['text' => 'Revive',      'points' => 5],
+            6 => ['text' => 'Rare Candy',  'points' => 3],
+            7 => ['text' => 'Repel',       'points' => 1],
+            8 => ['text' => 'Town Map',    'points' => 1]
         ],
-        'wrong_answers' => ['Car engine', 'Scribble pad', 'Garden hose', 'Anvil'],
-        'funny_answers' => ['A live turkey', 'A kitchen sink', 'Washing machine', 'Building bricks']
+        'wrong_answers' => ['Lawn mower', 'Bowling ball', 'Surfboard', 'Grand piano'],
+        'funny_answers' => ['A live Snorlax', 'A kitchen sink', 'An entire Pokemon Center', 'Building bricks']
     ],
     2 => [
-        'prompt'  => 'Name something you would find in almost every kitchen.',
+        'prompt'  => 'Name a Pokemon that could assist you in the kitchen.',
         'answers' => [
-            1 => ['text' => 'Refrigerator', 'points' => 35],
-            2 => ['text' => 'Stove',        'points' => 25],
-            3 => ['text' => 'Sink',         'points' => 20],
-            4 => ['text' => 'Microwave',    'points' => 10],
-            5 => ['text' => 'Knife',        'points' => 5],
-            6 => ['text' => 'Plate',        'points' => 3],
-            7 => ['text' => 'Spoon',        'points' => 1],
-            8 => ['text' => 'Fork',         'points' => 1]
+            1 => ['text' => 'Minccino',    'points' => 35],
+            2 => ['text' => 'Rotom',       'points' => 25],
+            3 => ['text' => 'Machamp',     'points' => 20],
+            4 => ['text' => 'Bergmite',    'points' => 10],
+            5 => ['text' => 'Ditto',       'points' => 5],
+            6 => ['text' => 'Greedent',    'points' => 3],
+            7 => ['text' => 'Charizard',   'points' => 1],
+            8 => ['text' => "Farfetch'd",  'points' => 1]
         ],
-        'wrong_answers' => ['Airplane wing', 'Traffic light', 'Anchor', 'Snowboard'],
-        'funny_answers' => ['Roller coaster', 'Swimming pool', 'A live dinosaur', 'Spaceship']
+        'wrong_answers' => ['Onix', 'Zubat', 'Ekans', 'Geodude'],
+        'funny_answers' => ['Snorlax', 'Magikarp', 'Wailord', 'Gyarados']
     ],
     3 => [
-        'prompt'  => 'Name something people do immediately after waking up in the morning.',
+        'prompt'  => 'Name a Pokemon that most people would recognize.',
         'answers' => [
-            1 => ['text' => 'Brush teeth', 'points' => 35],
-            2 => ['text' => 'Drink coffee', 'points' => 25],
-            3 => ['text' => 'Check phone',  'points' => 20],
-            4 => ['text' => 'Go to bathroom','points' => 10],
-            5 => ['text' => 'Stretch',      'points' => 5],
-            6 => ['text' => 'Shower',       'points' => 3],
-            7 => ['text' => 'Make bed',     'points' => 1],
-            8 => ['text' => 'Exercise',     'points' => 1]
+            1 => ['text' => 'Pikachu',     'points' => 35],
+            2 => ['text' => 'Charmander',  'points' => 25],
+            3 => ['text' => 'Squirtle',    'points' => 20],
+            4 => ['text' => 'Bulbasaur',   'points' => 10],
+            5 => ['text' => 'Eevee',       'points' => 5],
+            6 => ['text' => 'Jigglypuff',  'points' => 3],
+            7 => ['text' => 'Snorlax',     'points' => 1],
+            8 => ['text' => 'Mewtwo',      'points' => 1]
         ],
-        'wrong_answers' => ['Sleep for 8 hours', 'Go to sleep', 'Put on pajamas', 'Dream'],
-        'funny_answers' => ['Fight a dragon', 'Eat a brick', 'Fly away', 'Teleport']
+        'wrong_answers' => ['Mario', 'Sonic', 'Kirby', 'Link'],
+        'funny_answers' => ['My neighbor Steve', 'A toaster', 'A potato', 'Garfield']
     ],
     4 => [
-        'prompt'  => 'Name something people pack when going on a road trip.',
+        'prompt'  => 'Name a Pokemon type.',
         'answers' => [
-            1 => ['text' => 'Snacks',       'points' => 35],
-            2 => ['text' => 'Phone charger','points' => 25],
-            3 => ['text' => 'Playlist',     'points' => 20],
-            4 => ['text' => 'Drinks',       'points' => 10],
-            5 => ['text' => 'Sunglasses',   'points' => 5],
-            6 => ['text' => 'Pillow',       'points' => 3],
-            7 => ['text' => 'Cash',         'points' => 1],
-            8 => ['text' => 'Map',          'points' => 1]
+            1 => ['text' => 'Water',       'points' => 35],
+            2 => ['text' => 'Fire',        'points' => 25],
+            3 => ['text' => 'Grass',       'points' => 20],
+            4 => ['text' => 'Electric',    'points' => 10],
+            5 => ['text' => 'Psychic',     'points' => 5],
+            6 => ['text' => 'Dragon',      'points' => 3],
+            7 => ['text' => 'Ghost',       'points' => 1],
+            8 => ['text' => 'Normal',      'points' => 1]
         ],
-        'wrong_answers' => ['Anchor', 'Boat motor', 'Submarine hatch', 'Airplane wing'],
-        'funny_answers' => ['A live elephant', 'Kitchen sink', 'Swimming pool', 'Roller coaster']
+        'wrong_answers' => ['Sand', 'Plastic', 'Wooden', 'Glass'],
+        'funny_answers' => ['Pizza', 'Banana', 'Disco', 'Spaghetti']
     ]
 ];
 
