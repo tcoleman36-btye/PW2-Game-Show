@@ -125,6 +125,12 @@ h3 {
     text-align: right;
 }
 
+.playagain {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
 .playagain button {
     display: inline-block;
     background-color: #cc0000;
@@ -134,9 +140,6 @@ h3 {
     font-weight: bold;
     text-decoration: none;
     transition: 0.3s;
-    position: absolute;
-    left: 700px;
-    top: 700px;
 }
 
 .playagain button:hover {
